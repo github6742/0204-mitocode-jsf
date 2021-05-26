@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Desarrollos\java\0102-mitocode-jsf\V06-JSF-LOGIN-HIBERNATE-ECL\.metadata\.plugins\org.eclipse.jdt.core
+474128454.index
+2921057145.index

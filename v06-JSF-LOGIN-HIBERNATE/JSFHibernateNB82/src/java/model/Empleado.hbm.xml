@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/04/2021 20:38:51 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Empleado" table="empleado" catalog="persistencia" optimistic-lock="version">
+        <id name="codEmpleado" type="java.lang.Integer">
+            <column name="codEmpleado" />
+            <generator class="identity" />
+        </id>
+        <property name="nombres" type="string">
+            <column name="nombres" length="45" />
+        </property>
+        <property name="apellidos" type="string">
+            <column name="apellidos" length="45" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

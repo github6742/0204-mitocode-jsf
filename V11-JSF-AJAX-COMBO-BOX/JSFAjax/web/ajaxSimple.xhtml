@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head></h:head>
+    <body>
+        <h:form>
+            <h:panelGrid columnClasses="3">
+                
+                <!-- Forma 1 
+                <h:inputText id="txtPersonaIn" value="{personaBean2.nombre}"/>
+                
+                <h:commandButton value="Refrescar">
+                    <f:ajax execute="txtPersonaIn" render="txtPersonaOut"/>
+                </h:commandButton>
+                <h:outputLabel id="txtPersonaOut" value="{personaBean2.nombre}"/>
+                -->
+                                               
+                <!-- Forma 2 
+                <h:inputText id="txtPersonaIn" value="{personaBean2.nombre}"/>
+                
+                <f:ajax event="keyup" execute="txtPersonaIn" render="txtPersonaOut"/>
+                <h:outputLabel id="txtPersonaOut" value="{personaBean2.nombre}"/>
+                -->
+                                               
+                <!-- Forma 3 en primefaces  -->
+                <h:inputText id="txtPersonaIn" value="#{personaBean2.nombre}"/>
+                <f:ajax event="keyup" execute="txtPersonaIn" render="txtPersonaOut"/>
+                <h:outputLabel id="txtPersonaOut" value="#{personaBean2.nombre}"/>
+                
+                <p:inputText id="txtPersonaInPrime" value="#{personaBean2.nombre}"></p:inputText>
+                <p:commandButton value="Refrescar" update="txtPersonaOutPrime"/>
+                <p:outputLabel id="txtPersonaOutPrime" value="#{personaBean2.nombre}"/>
+                
+                    
+                
+            </h:panelGrid>
+        </h:form>
+    </body>
+</html>

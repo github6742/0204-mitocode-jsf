@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head></h:head>
+    <body>
+        <h1>JSF + JASPER REPORTS EXPORTS </h1>
+        <h:form>
+            <h:commandButton value="Exportar PDF" actionListener="#{personaBean.exportarPDF(actionEvent)}"/>
+            <h:commandButton value="Exportar EXCEL" action="#{personaBean.exportarExcel}"/>
+            <h:commandButton value="Exportar POWER POINT" action="#{personaBean.exportarPPT}"/>
+            <h:commandButton value="Exportar WORD" action="#{personaBean.exportarDOC}"/>
+            <h:commandButton value="Ver PDF" action="#{personaBean.verPDF}"/>
+        </h:form>
+    </body>
+</html>

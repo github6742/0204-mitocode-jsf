@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head></h:head>
+    <body>
+        <h:form rendered="#{usuarioBean.verificarSesion()}">            
+        <h:panelGrid columns="2">
+            <h1>Bienvenido Usuario</h1>
+            <h:outputLabel value="#{usuarioBean.usuario.nombre}"/>
+            <h:commandButton value="Cerrar Sesion" action="#{usuarioBean.cerrarSession()}"/>
+        </h:panelGrid>
+
+        <h2>CRUD - EMPLEADOS</h2>
+        <h:commandButton value="Registrar" action="{empleadoBean.registrar()}"/>
+        <h:commandButton value="Listar" action="{empleadoBean.listar()}"/>
+        <h:commandButton value="Buscar" action="{empleadoBean.buscar()}"/>
+
+        <h:dataTable value="{empleadoBean.LstEmpleados}" var="emp">
+            <h:column>
+                <f:facet name="header">Nombres</f:facet>
+                <h:outputLabel value="{emp.nombres]}"/>
+
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Apellidos</f:facet>
+                <h:outputLabel /><!--value="{emp.nombres]}"-->
+
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Sexo</f:facet>
+                <h:outputLabel /><!--value="{emp.nombres]}"-->
+
+            </h:column>
+
+
+        </h:dataTable>
+        </h:form>
+    </body>
+</html>
